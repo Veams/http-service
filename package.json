@@ -1,0 +1,31 @@
+{
+	"name": "@veams/http-service",
+	"version": "1.0.0",
+	"description": "Generic and easy http service class",
+	"main": "lib/index.js",
+	"scripts": {
+		"build": "tsc --project tsconfig.json --outDir lib --declarationDir lib --declaration --module commonjs",
+		"start": "tsc --project tsconfig.json --watch --outDir lib --declarationDir lib --declaration --module commonjs",
+		"prepublish": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Veams/http-service.git"
+	},
+	"keywords": [
+		"Veams"
+	],
+	"author": "Sebastian Fitzner",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Veams/http-service/issues"
+	},
+	"homepage": "https://github.com/Veams/http-service#readme",
+	"devDependencies": {
+		"@types/jquery": "^3.3.0",
+		"typescript": "^2.7.1"
+	},
+	"dependencies": {
+		"@veams/base": "^1.0.1"
+	}
+}
