@@ -159,15 +159,11 @@ class HttpService extends Base {
 		requestObject.url = url || this.options.url;
 		requestObject.type = this.options.type;
 
-		console.log('options: ', this.options.type);
 		if (this.options.type === 'json' && this.options.headers === null) {
 			this.options.headers = {
 				'content-type': 'application/json'
 			};
 		}
-
-		console.log('header: ', this.options.headers);
-
 
 		return this.promiseRequest(requestObject);
 	}
