@@ -36,7 +36,7 @@ class HttpService extends Base {
 	data: any;
 	options: ServiceOptions;
 
-	constructor(opts: ServiceOptions = {}) {
+	constructor(options: ServiceOptions = {}) {
 		let namespace = '@veams/http-service';
 		let defaultOptions = {
 			url: null,
@@ -46,7 +46,7 @@ class HttpService extends Base {
 			headers: null
 		};
 
-		super({namespace, opts}, defaultOptions);
+		super({namespace, options}, defaultOptions);
 
 		this.data = {};
 		this.initialize();
@@ -159,11 +159,15 @@ class HttpService extends Base {
 		requestObject.url = url || this.options.url;
 		requestObject.type = this.options.type;
 
+		console.log('options: ', this.options.type);
 		if (this.options.type === 'json' && this.options.headers === null) {
 			this.options.headers = {
 				'content-type': 'application/json'
 			};
 		}
+
+		console.log('header: ', this.options.headers);
+
 
 		return this.promiseRequest(requestObject);
 	}
