@@ -1,12 +1,13 @@
-<p align="center"><img src="https://www.veams.org/img/svg/icons/veams-std.svg"></p>
-<p align="center">Head to the <a href="http://veams.org/">site</a> for detailed instructions.
-<br><br>
-<a href="https://gitter.im/Sebastian-Fitzner/Veams?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Sebastian-Fitzner/Veams.svg" alt="Gitter Chat" /></a></p>
+[//]: # ({{#wrapWith "content-section"}})
 
+[//]: #     ({{#wrapWith "grid-row"}})
+[//]: #         ({{#wrapWith "grid-col" colClasses="is-col-mobile-l-8"}})
 
 # HTTP Service (`@veams/http-service`)
 
-Simple http service provided for and by Veams. 
+Simple http service provided for and by `VEAMS`. 
+
+---------------
 
 ## Installation
 
@@ -23,6 +24,8 @@ npm install @veams/http-service --save
 ```bash
 yarn add @veams/http-service 
 ```
+
+---------------
 
 ## Usage
 
@@ -57,7 +60,9 @@ The default parser returns the `responseText` as string or object. This is depen
 
 You can easily override the parser by taking a look at the example. 
 
-### Example
+---------------
+
+## Example
 
 ```js 
 import HttpService from '@veams/http-service';
@@ -117,5 +122,9 @@ const myPagesService = new MyPagesService();
 export default myPagesService;
 ```
 
-
 That's it!
+
+[//]: #         ({{/wrapWith}})
+[//]: #     ({{/wrapWith}})
+
+[//]: # ({{/wrapWith}})
