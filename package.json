@@ -1,6 +1,6 @@
 {
 	"name": "@veams/http-service",
-	"version": "1.0.4",
+	"version": "1.0.3",
 	"description": "Generic and easy http service class",
 	"main": "lib/index.js",
 	"scripts": {
