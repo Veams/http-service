@@ -110,20 +110,20 @@ class HttpService extends Base {
 
                     this.requestDidLoad(request, obj);
                 } else {
-                    reject({
-                        status: request.status,
-                        statusText: request.statusText
-                    });
+                    reject(this.parser({
+                        request: request,
+                        type: obj.type
+                    }));
 
                     this.requestDidLoad(request, obj);
                 }
             };
 
-            request.onerror = function () {
-                reject({
-                    status: request.status,
-                    statusText: request.statusText
-                });
+            request.onerror = () => {
+                reject(this.parser({
+                    request: request,
+                    type: obj.type
+                }));
             };
 
             this.requestWillSend(request, obj);
